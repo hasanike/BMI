@@ -2,6 +2,7 @@ let heightInches;
 let weightPounds;
 
 function calulateBMI() {
-    (180 * weightPounds)/(heightInches * heightInches)
+    console.log(180 * weightPounds)/(heightInches * heightInches)
+return;
 }
 
