@@ -1,14 +1,22 @@
-let weight;
-let height; 
-let userBMI;
+let weightLbs;
+let heightInches;
 
-if (UserBMI < 18.5) {
-console.log("BMI is low")
+
+
+function calculateBMI(weightLbs,heightInches) {
+    return weightLbs / ((heightInches * heightInches) / 703);
 }
-else if (UserBMI < 25) {
-console.log("BMI is Normal")
+calculateBMI();
+
+let userBMI = calculateBMI();
+
+if (userBMI <= 18.4 ) {
+    console.log("Underweight");
+} else if (18.5 <= userBMI < 24.9){
+    console.log( "Normal Weight");
+} else if (25 < userBMI < 30){
+    console.log( "Overweight");
+} else {
+    console.log("Obese");
 }
-else ( UserBMI< 30 )
-console.log("BMi is High")
-if (userBMI > 30)
-console.log("BMI suggests Obesity");
+console.log(calculateBMI(180, 70));
